@@ -5,7 +5,18 @@
     <label for="email"></label>
     <input type="text" name="email">
     <input type="password" name="password">
+    <input type="submit" value="Create">
 </form>-->
+
+<form accept-charset="UTF-8" action="/users" method="post">
+    <label for="username">Username</label>
+    <input type="text" name="user[username]">
+    <label for="email">Email</label>
+    <input type="text" name="user[email]">
+    <label for="password">Password</label>
+    <input type="password" name="user[password]">
+    <input type="submit" value="Create">
+</form>
 
 <%# form_with model: @user do |f| %>
     <%# f.text_field :username %>
@@ -14,9 +25,9 @@
     <%# f.submit "Create" %>
 <%# end %>
 
-<%= form_tag('/users', method: "post") do %>
-    <%= text_field_tag(:username) %>
-    <%= text_field_tag(:email) %>
-    <%= password_field_tag(:password) %>
-    <%= submit_tag("Create") %>
-<% end %>
+<%# form_tag('/users', method: "post") do %>
+    <%# text_field_tag(:username) %>
+    <%# text_field_tag(:email) %>
+    <%# password_field_tag(:password) %>
+    <%# submit_tag("Create") %>
+<%# end %>
